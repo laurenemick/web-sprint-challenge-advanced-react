@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDarkMode } from "../hooks/useDarkMode";
 
-const Toggle = (props) => {
+const Toggle = () => {
     const [darkMode, setDarkMode] = useDarkMode('darkMode');
 
     const toggleMode = e => {

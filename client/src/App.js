@@ -5,6 +5,7 @@ import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 // import Toggle from "./components/Toggle";
+import { useDarkMode } from "./hooks/useDarkMode";
 
 import "./App.css";
 
@@ -21,6 +22,14 @@ function App() {
   const removeFromCart = (plant) => {
     setCart(cart.filter((p) => p.id !== plant.id));
   };
+
+  const [darkMode, setDarkMode] = useDarkMode('darkMode');
+
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
+
 
   return (
     <div>
@@ -44,9 +53,12 @@ function App() {
               </NavLink>
             </li>
           </ul>
-          {/* <div>
-            <Toggle />
-          </div> */}
+          <div className="dark-mode__toggle">
+            <div
+                onClick={toggleMode}
+                className={darkMode ? 'toggle toggled' : 'toggle'}
+            />
+          </div>
         </nav>
         <Route
           exact

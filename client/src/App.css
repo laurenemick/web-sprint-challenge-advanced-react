@@ -274,3 +274,17 @@ pre {
 .toggled {
   left: 18px;
 }
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .navbar {
+    background-color: #1F2022;
+    border: none;
+  }
+}
