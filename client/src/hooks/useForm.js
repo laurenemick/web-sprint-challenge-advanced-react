@@ -3,10 +3,10 @@ import { useLocalStorage } from "./useLocalStorage";
 
 export const useForm = (key, initialValues) => {
     const [values, setValues] = useLocalStorage(key, initialValues);
-    console.log({ values });
+    // console.log({ values });
   
     const handleChanges = e => {
-      console.log(e.target);
+    //   console.log(e.target);
       setValues({
         ...values,
         [e.target.name]: e.target.value

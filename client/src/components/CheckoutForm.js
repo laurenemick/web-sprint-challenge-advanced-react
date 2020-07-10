@@ -31,43 +31,63 @@ const CheckoutForm = (props) => {
     <>
       <form onSubmit={handleSubmit}>
         <h2>Checkout Form</h2>
-        <label>
+        <label htmlFor="firstName">
           First Name:
           <input
+            id="firstName"
             name="firstName"
             value={values.firstName}
             onChange={handleChanges}
           />
         </label>
-        <label>
+        <label htmlFor="lastName">
           Last Name:
           <input
+            id="lastName"
             name="lastName"
             value={values.lastName}
             onChange={handleChanges}
           />
         </label>
-        <label>
+        <label htmlFor="address">
           Address:
           <input
+            data-testid='addressInput'
+            id="address"
             name="address"
             value={values.address}
             onChange={handleChanges}
           />
         </label>
-        <label>
+        <label htmlFor="city">
           City:
-          <input name="city" value={values.city} onChange={handleChanges} />
+          <input 
+            id="city"
+            name="city" 
+            value={values.city} 
+            onChange={handleChanges} 
+          />
         </label>
-        <label>
+        <label htmlFor="state">
           State:
-          <input name="state" value={values.state} onChange={handleChanges} />
+          <input 
+            id="state" 
+            name="state" 
+            value={values.state} 
+            onChange={handleChanges} 
+          />
         </label>
-        <label>
+        <label htmlFor="zip">
           Zip:
-          <input name="zip" value={values.zip} onChange={handleChanges} />
+          <input 
+            data-testid='zipInput'
+            id="zip" 
+            name="zip" 
+            value={values.zip} 
+            onChange={handleChanges} 
+          />
         </label>
-        <button>Checkout</button>
+        <button data-testid='button'> Checkout</button>
       </form>
 
       {showSuccessMessage && (
