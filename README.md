@@ -30,13 +30,53 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+    - Declare your class, and extend the React.Component Base class.
+    - Set up our constructor and add state.
+    - Render some UI and return some JSX.
+
 2. Describe the different phases of the component lifecycle.
+
+    Mounting
+      • Your render method is invoked.
+      • componentDidMount gets called as well.
+    Updating
+      • setState can be used to change the component’s state data, forcing a call to render.
+      • shouldComponentUpdate is a method one could use here to stop a component from calling render if necessary.
+    Un-mounting  
+      • Component is removed from the screen.
+    componentWillUnmount is called and can be used for any clean up you may need to do.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+    Constructor 
+      - initializes state
+      - bind methods to the class
+
+    Render
+      - handles the rendering of your component to the UI
+
+    CDM
+      - fetch initial data
+      - set up any listeners/subscriptions
+    
+    CDU
+      - fetch new data based on state or prop changes
+      - be wary of infinite loops
+
+    CWU
+      - cleanup event listeners and subscriptions
+      
+
 4. Define stateful logic.
 
+    Logic that is built into a component, and usually deals with state.
+
 5. Describe how to test a React component with React Testing Library.
+
+    The framework we use for testing is: arrange, act, assert. These are three steps that we can take to build good tests. First, we “arrange” our test by setting up our code such that it can be tested. Then, we “act” - calling a method or function that returns a result of interest to our test. Finally, with that return we “assert” if our expected return matched the actual return.
+
+    Source: https://learn.lambdaschool.com/web3/module/rechTQVfCg4p85Hoi/
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
